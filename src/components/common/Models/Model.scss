@@ -1,4 +1,3 @@
-/* src/components/common/Modal/Modal.css */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -12,7 +11,7 @@
   z-index: 1000;
 
   .modal-container {
-    background-color: var(--bg-medium);
+    background-color:#09091a;
     border-radius: 12px;
     max-height: 90vh;
     overflow-y: auto;

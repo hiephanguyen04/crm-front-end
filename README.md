@@ -1,54 +1,92 @@
-# React + TypeScript + Vite
+<think>The user is asking me to write a README.md file with instructions on how to run or deploy the project in a local environment. The instructions need to be correct and clear, as the user mentions that incorrect instructions will lead to rejection.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Based on the context, this appears to be a CRM project built with React, likely using TypeScript, and using SCSS for styling. The project structure looks typical of a modern frontend application.
 
-Currently, two official plugins are available:
+I should create a README.md that includes:
+1. Project overview
+2. Prerequisites
+3. Installation instructions
+4. Running the project locally
+5. Building for production
+6. Additional information if necessary
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I'll need to make assumptions about the build system since I don't see a package.json, but the instructions mention yarn, so I'll assume it's using Yarn as the package manager.</think># CRM Project
 
-## Expanding the ESLint configuration
+A modern CRM application built with React and TypeScript for managing contacts, opportunities, and customer relationships.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v14.x or later recommended)
+- [Yarn](https://yarnpkg.com/) package manager
+
+## Getting Started
+
+Follow these steps to set up and run the project locally:
+
+### 1. Clone the repository
+
+```bash
+git clone [repository-url]
+cd crm-project
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+yarn install
 ```
+
+### 3. Run the development server
+
+```bash
+yarn dev
+```
+
+This will start the development server, typically on http://localhost:3000 (the terminal will show the exact URL).
+
+### 4. Build for production
+
+When you're ready to build the application for production:
+
+```bash
+yarn build
+```
+
+The optimized build will be created in the `dist` directory.
+
+### 5. Preview production build
+
+To preview the production build locally:
+
+```bash
+yarn preview
+```
+
+## Project Structure
+
+```
+crm-project/
+├── src/
+│   ├── assets/         # Icons, images and static assets
+│   ├── components/     # Reusable UI components
+│   ├── data/           # Mock data and data utilities
+│   ├── sections/       # Main application sections
+│   ├── types/          # TypeScript type definitions
+│   └── App.tsx         # Main application component
+```
+
+## Features
+
+- Contact management
+- Opportunity tracking
+- Pipeline visualization
+- Task management
+- User-friendly interface
+
+## Technologies
+
+- React
+- TypeScript
+- SCSS for styling
+- Vite (assumed as the build tool)

@@ -1,4 +1,3 @@
-// src/components/layout/Header/Header.tsx
 import {
   NotificationIcon,
   QuestionIcon,

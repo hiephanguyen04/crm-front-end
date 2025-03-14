@@ -1,9 +1,6 @@
 import OpportunitiesView from "@/sections/opportunities/OpportunitiesView";
-import React from "react";
 
-type Props = {};
-
-const Opportunities = (props: Props) => {
+const Opportunities = () => {
   return (
     <div>
       <OpportunitiesView />

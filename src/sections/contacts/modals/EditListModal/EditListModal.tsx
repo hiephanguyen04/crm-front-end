@@ -1,4 +1,3 @@
-// src/pages/Contacts/modals/EditListModal.tsx
 import { MenuIcon } from "@/assets/icons";
 import Modal from "@/components/common/Models/Modal";
 import { List } from "@/types";

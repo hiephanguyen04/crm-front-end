@@ -1,5 +1,4 @@
-// src/pages/Contacts/modals/EditListModal.module.scss
-// Variables
+
 $primary: #ea580c;
 $text-light: #fff;
 $text-medium: #d1d5db;
@@ -10,7 +9,7 @@ $hover-bg: rgba(255, 255, 255, 0.1);
 $disabled: rgba(255, 255, 255, 0.3);
 
 .container {
-    background: $bg-medium;
+    background: transparent;
     padding: 10px 100px;
     border-radius: 10px;
     color: $text-light;

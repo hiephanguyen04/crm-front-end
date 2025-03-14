@@ -1,4 +1,3 @@
-// src/pages/Contacts/components/Pagination.tsx
 import React, { useState } from "react";
 import "./Pagination.scss";
 interface PaginationProps {

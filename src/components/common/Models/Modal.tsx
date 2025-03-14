@@ -13,7 +13,6 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({
   isOpen,
-  title,
   onClose,
   children,
   size = "md",

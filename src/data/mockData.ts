@@ -1,4 +1,3 @@
-// src/config/mockData.ts
 import {
   FilterOption,
   Opportunity,
@@ -80,18 +79,16 @@ export const colorOptions = [
   "#164E63",
   "#0891B2",
 ];
-// Mock users with password for authentication
 export const users = [
   {
     id: "1",
     email: "sebastien@metaforma.com",
-    password: "password123", // In a real app, this would be hashed
+    password: "password123",
     fullName: "Sébastien Hanouna",
     role: "admin",
     position: "CEO, Admin",
     avatar: "/path/to/avatar.jpg",
   },
-  // Add more users...
 ];
 
 export const contacts: Contact[] = [
@@ -102,11 +99,10 @@ export const contacts: Contact[] = [
     phone: "06 88 65 26 87",
     type: "Particulier",
     opportunity: "Formation 3D",
-    assignedTo: "1", // Sébastien's ID
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     createdAt: "2023-06-29T15:10:50",
   },
-  // Add more contacts...
 ];
 
 export const opportunities: Opportunity[] = [
@@ -117,11 +113,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Non traité",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -132,11 +124,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Injoignable",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -147,11 +135,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Closing en cours",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -162,11 +146,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Gagné",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: null,
   },
@@ -177,11 +157,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Perdu",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -192,11 +168,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "En négociation",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -207,11 +179,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Non traité",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -222,11 +190,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Injoignable",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -237,11 +201,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Closing en cours",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -252,11 +212,7 @@ export const opportunities: Opportunity[] = [
     organization: "Studio Gillig",
     phase: "Gagné",
     value: 1500,
-    owner: {
-      id: "owner-1",
-      name: "Sébastien",
-      avatar: "/assets/images/avatar.jpg",
-    },
+    assignedTo: "1",
     tags: ["BTP", "BtoB"],
     closingDate: "2023-06-29",
   },
@@ -268,37 +224,36 @@ export const tasks: Task[] = [
     title: "Titre tâche",
     type: "Appel",
     dueDate: "2023-06-29T15:10:50",
-    contact: "1", // Romain's ID
-    assignedTo: "1", // Sébastien's ID
+    contact: "1",
+    assignedTo: "1",
     completed: false,
     createdAt: "2023-06-29T15:10:50",
   },
-  // Add more tasks...
 ];
 
 export const tags: Tag[] = [
   {
     id: "1",
     name: "Étiquette 1",
-    color: "#0066FF", // Blue
+    color: "#0066FF",
     contactCount: 165,
   },
   {
     id: "2",
     name: "Étiquette 1",
-    color: "#0066FF", // Blue
+    color: "#0066FF",
     contactCount: 165,
   },
   {
     id: "3",
     name: "Étiquette 1",
-    color: "#0066FF", // Blue
+    color: "#0066FF",
     contactCount: 165,
   },
   {
     id: "4",
     name: "Étiquette 1",
-    color: "#0066FF", // Blue
+    color: "#0066FF",
     contactCount: 165,
   },
 ];
@@ -316,7 +271,6 @@ export const generateOpportunities = (): Opportunity[] => {
 
   const result: Opportunity[] = [...opportunities];
 
-  // Generate additional opportunities
   for (let i = 0; i < 20; i++) {
     const phase = phases[Math.floor(Math.random() * phases.length)];
     result.push({

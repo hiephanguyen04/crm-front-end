@@ -1,4 +1,3 @@
-// src/pages/Contacts/components/ContactsTable.tsx
 import React from "react";
 import "./ContactsTable.scss";
 import { Contact } from "@/types";

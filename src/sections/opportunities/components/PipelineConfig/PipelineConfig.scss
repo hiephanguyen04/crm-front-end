@@ -1,0 +1,99 @@
+.pipeline-config {
+    width: 100%;
+}
+
+.pipeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.pipeline-name-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pipeline-name-container label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.pipeline-name-input {
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-medium);
+    color: var(--text-light);
+    font-size: 14px;
+    width: 200px;
+}
+
+.pipeline-success-toggle {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pipeline-success-toggle label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-light);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.toggle-switch label:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + label {
+    background-color: var(--primary);
+}
+
+.toggle-switch input:checked + label:before {
+    transform: translateX(26px);
+}
+
+.toggle-switch.small {
+    width: 40px;
+    height: 20px;
+}
+
+.toggle-switch.small label:before {
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+}

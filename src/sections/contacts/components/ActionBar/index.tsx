@@ -1,4 +1,3 @@
-// src/pages/Contacts/components/ActionBar.tsx
 import React, { useState } from "react";
 import "./ActionBar.scss";
 import { PlusIcon } from "@/assets/icons";

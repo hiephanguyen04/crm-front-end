@@ -1,4 +1,3 @@
-// src/pages/Opportunities/components/OpportunityKanban.tsx
 import { Opportunity } from "@/types";
 import React from "react";
 
@@ -64,11 +63,11 @@ const OpportunityKanban: React.FC<OpportunityKanbanProps> = ({
             <div className="column-title">
               <span className={`status-indicator ${phaseColors[phase]}`}></span>
               <span className="phase-name">{phase}</span>
-              <span className="phase-count">
-                {opportunitiesByPhase[phase].length}
-              </span>
+              <div className="column-total">{phaseTotals[phase]}€</div>
             </div>
-            <div className="column-total">{phaseTotals[phase]}€</div>
+            <span className="phase-count">
+              {opportunitiesByPhase[phase].length}
+            </span>
           </div>
           <div className="column-cards">
             {opportunitiesByPhase[phase].map((opportunity) =>

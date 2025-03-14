@@ -1,6 +1,5 @@
-// src/pages/Opportunities/components/PipelineConfig.tsx
 import React, { useState } from "react";
-
+import "./PipelineConfig.scss";
 interface PipelineConfigProps {
   onCancel: () => void;
 }

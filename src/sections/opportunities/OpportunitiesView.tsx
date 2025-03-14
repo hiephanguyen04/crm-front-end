@@ -1,36 +1,21 @@
-// src/pages/Opportunities/Opportunities.tsx
 import React, { useState } from "react";
-// import { generateOpportunities } from "../../data/opportunityMockData";
-
-import CreateOpportunityModal from "./components/CreateOpportunityModal";
-import OpportunityKanban from "./components/OpportunityKanban";
+import CreateOpportunityModal from "./components/CreateOpportunityModal/CreateOpportunityModal";
+import OpportunityKanban from "./components/OpportunityKanban/OpportunityKanban";
 import OpportunityList from "./components/OpportunityList/OpportunityList";
-import PipelineConfig from "./components/PipelineConfig";
+import PipelineConfig from "./components/PipelineConfig/PipelineConfig";
 
 import "./Opportunities.scss";
-import {
-  FilterOption,
-  OpportunitiesState,
-  Opportunity,
-  phaseColors,
-} from "@/types";
+import { OpportunitiesState, Opportunity, phaseColors } from "@/types";
 import { generateOpportunities } from "@/data/mockData";
-import { PlusIcon } from "@/assets/icons";
+import { MenuIcon, PlusIcon } from "@/assets/icons";
 import { SelectFilter } from "../contacts/components/ActionBar";
 import SearchField from "@/components/common/Search/SearchField";
+import { Icon13 } from "@/assets/icons";
 
 const OpportunitiesView: React.FC = () => {
   const [opportunities, setOpportunities] = useState<Opportunity[]>(
     generateOpportunities()
   );
-
-  const filterOptions: {
-    primary: FilterOption[];
-    owner: FilterOption[];
-  } = {
-    primary: [{ label: "Plus de filtre", value: "" }],
-    owner: [{ label: "Tout le monde", value: "" }],
-  };
 
   const [state, setState] = useState<OpportunitiesState>({
     selectedOpportunities: [],
@@ -55,13 +40,11 @@ const OpportunitiesView: React.FC = () => {
       opportunity.contact.toLowerCase().includes(state.searchTerm.toLowerCase())
   );
 
-  // Calculate total value of all filtered opportunities
   const totalValue = filteredOpportunities.reduce(
     (sum, opportunity) => sum + opportunity.value,
     0
   );
 
-  // Group opportunities by phase
   const opportunitiesByPhase = {
     "Non traité": filteredOpportunities.filter(
       (opp) => opp.phase === "Non traité"
@@ -84,7 +67,6 @@ const OpportunitiesView: React.FC = () => {
     return opportunitiesByPhase[phase].reduce((sum, opp) => sum + opp.value, 0);
   };
 
-  // Handle opportunity selection
   const handleOpportunitySelect = (opportunityId: string) => {
     setState((prev) => {
       if (prev.selectedOpportunities.includes(opportunityId)) {
@@ -103,7 +85,6 @@ const OpportunitiesView: React.FC = () => {
     });
   };
 
-  // Handle select all opportunities
   const handleSelectAll = () => {
     if (state.selectedOpportunities.length === filteredOpportunities.length) {
       setState({ ...state, selectedOpportunities: [] });
@@ -117,44 +98,32 @@ const OpportunitiesView: React.FC = () => {
     }
   };
 
-  // Handle search term change
   const handleSearchChange = (e: string) => {
     setState({ ...state, searchTerm: e.target.value });
   };
 
-  // Toggle view mode between list and kanban
   const toggleViewMode = (mode: "list" | "kanban") => {
     setState({ ...state, viewMode: mode });
   };
 
-  // Open create opportunity modal
-  const openCreateModal = () => {
-    setState({ ...state, showCreateModal: true });
-  };
-
-  // Close create opportunity modal
   const closeCreateModal = () => {
     setState({ ...state, showCreateModal: false });
   };
 
-  // Create new opportunity
   const handleCreateOpportunity = (opportunity: Opportunity) => {
     setOpportunities([opportunity, ...opportunities]);
     closeCreateModal();
   };
 
-  // Toggle pipeline configuration mode
   const togglePipelineMode = () => {
     setState({ ...state, pipelineMode: !state.pipelineMode });
   };
 
-  // Handle mass actions (selected opportunities)
   const handleMassAction = (
     action: "assign" | "lost" | "won" | "move" | "delete"
   ) => {
     switch (action) {
       case "assign":
-        // Logic to assign selected opportunities
         break;
       case "lost":
         setOpportunities(
@@ -177,7 +146,6 @@ const OpportunitiesView: React.FC = () => {
         setState({ ...state, selectedOpportunities: [] });
         break;
       case "move":
-        // Logic to move selected opportunities to a different phase
         break;
       case "delete":
         setOpportunities(
@@ -190,7 +158,6 @@ const OpportunitiesView: React.FC = () => {
     }
   };
 
-  // Deselect all opportunities
   const deselectAll = () => {
     setState({ ...state, selectedOpportunities: [] });
   };
@@ -221,12 +188,7 @@ const OpportunitiesView: React.FC = () => {
                       }`}
                       onClick={() => toggleViewMode("list")}
                     >
-                      <svg width="18" height="18" viewBox="0 0 24 24">
-                        <path
-                          d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                      <MenuIcon />
                     </button>
 
                     <button
@@ -235,12 +197,7 @@ const OpportunitiesView: React.FC = () => {
                       }`}
                       onClick={() => toggleViewMode("kanban")}
                     >
-                      <svg width="18" height="18" viewBox="0 0 24 24">
-                        <path
-                          d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                      <Icon13 />
                     </button>
                   </div>
                   <div className="opportunities-count">

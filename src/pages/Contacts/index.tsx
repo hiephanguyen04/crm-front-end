@@ -1,9 +1,6 @@
 import ContactView from "@/sections/contacts/ContactView";
-import React from "react";
 
-type Props = {};
-
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <div>
       <ContactView />

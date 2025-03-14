@@ -1,4 +1,3 @@
-// src/pages/Login/Login.tsx
 import { useGoogleLogin } from "@react-oauth/google";
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
@@ -15,14 +14,12 @@ const Login: React.FC = () => {
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
-        // Pass the correct token
         await loginWithGoogle(tokenResponse.access_token);
       } catch (error) {
         console.log(error);
         setError("Google authentication failed. Please try again.");
       }
     },
-    // Add these configurations
     flow: "implicit",
     scope: "email profile",
     onError: () => {

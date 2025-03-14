@@ -1,6 +1,6 @@
-// src/pages/Opportunities/components/CreateOpportunityModal.tsx
-import React, { useState } from 'react';
-import { Opportunity, OpportunityPhase } from '../../../types/opportunity.types';
+import { Opportunity, OpportunityPhase } from "@/types";
+import React, { useState } from "react";
+import "./CreateOpportunityModal.scss";
 
 interface CreateOpportunityModalProps {
   onClose: () => void;
@@ -9,19 +9,19 @@ interface CreateOpportunityModalProps {
 
 const CreateOpportunityModal: React.FC<CreateOpportunityModalProps> = ({
   onClose,
-  onSave
+  onSave,
 }) => {
   const [formData, setFormData] = useState({
-    name: '',
-    contact: '',
-    organization: '',
-    pipeline: 'Pipeline',
-    phase: 'Non traité' as OpportunityPhase,
-    amount: '1500',
-    closingDate: '29/06/2023',
-    closingTime: '12:30',
-    phone: '+33 6 88 65 26 87',
-    email: 'romain@gillig.studio',
+    name: "",
+    contact: "",
+    organization: "",
+    pipeline: "Pipeline",
+    phase: "Non traité" as OpportunityPhase,
+    amount: "1500",
+    closingDate: "29/06/2023",
+    closingTime: "12:30",
+    phone: "+33 6 88 65 26 87",
+    email: "romain@gillig.studio",
   });
 
   const handleChange = (
@@ -36,27 +36,26 @@ const CreateOpportunityModal: React.FC<CreateOpportunityModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create new opportunity from form data
+
     const newOpportunity: Opportunity = {
       id: `opp-${Date.now()}`,
-      name: formData.name || 'Affaire Romain',
-      organization: formData.organization || 'Studio Gillig',
-      contact: formData.contact || 'Romain Gillig',
+      name: formData.name || "Affaire Romain",
+      organization: formData.organization || "Studio Gillig",
+      contact: formData.contact || "Romain Gillig",
       phase: formData.phase,
       value: parseInt(formData.amount) || 1500,
       closingDate: formData.closingDate,
       email: formData.email,
       phone: formData.phone,
       owner: {
-        id: 'owner-1',
-        name: 'Sébastien',
-        avatar: '/assets/images/avatar.jpg',
+        id: "owner-1",
+        name: "Sébastien",
+        avatar: "/assets/images/avatar.jpg",
       },
-      tags: ['BTP', 'BtoB'],
-      score: 10
+      tags: ["BTP", "BtoB"],
+      score: 10,
     };
-    
+
     onSave(newOpportunity);
   };
 

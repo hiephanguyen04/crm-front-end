@@ -30,3 +30,4 @@ export { PhoneIcon } from "./PhoneIcon";
 export { MenuIcon } from "./MenuIcon";
 export { CloseIcon } from "./CloseIcon";
 export { TagIcon } from "./TagIcon";
+export { Icon13 } from "./logo copy 13";

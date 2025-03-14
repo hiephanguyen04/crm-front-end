@@ -5,9 +5,6 @@ import "./Layout.scss";
 import Sidebar from "./Sidebar";
 import MainNavigation from "@/components/navigation/MainNavigation";
 
-/**
- * Layout principal de l'application
- */
 const Layout: React.FC = () => {
   return (
     <div className="app-container">
