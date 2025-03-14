@@ -4,10 +4,11 @@
 Follow these steps to set up and run the project locally:
 
 ## account Login
-
+Have 2 Option login:
+1. 
 email: "admin@admin.com",
-password: "admin",
-
+password: "admin123",
+2. Google OAuth
 ### 1. Clone the repository
 
 ```bash
@@ -46,27 +47,6 @@ To preview the production build locally:
 ```bash
 yarn preview
 ```
-
-## Project Structure
-
-```
-crm-project/
-├── src/
-│   ├── assets/         # Icons, images and static assets
-│   ├── components/     # Reusable UI components
-│   ├── data/           # Mock data and data utilities
-│   ├── sections/       # Main application sections
-│   ├── types/          # TypeScript type definitions
-│   └── App.tsx         # Main application component
-```
-
-## Features
-
-- Contact management
-- Opportunity tracking
-- Pipeline visualization
-- Task management
-- User-friendly interface
 
 ## Technologies
 
