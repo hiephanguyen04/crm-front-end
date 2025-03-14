@@ -83,7 +83,7 @@ export const users = [
   {
     id: "1",
     email: "admin@admin.com",
-    password: "admin",
+    password: "admin123",
     fullName: "Sébastien Hanouna",
     role: "admin",
     position: "CEO, Admin",

@@ -49,7 +49,6 @@ const ContactView = () => {
     indexOfFirstContact,
     indexOfLastContact
   );
-  // Modal toggle functions
   const toggleListsModal = () => {
     setState({ ...state, showListsModal: !state.showListsModal });
   };
@@ -94,7 +93,6 @@ const ContactView = () => {
     setState({ ...state, showExportModal: !state.showExportModal });
   };
 
-  // Handle contact selection
   const handleContactSelect = (contactId: string) => {
     setState((prevState) => {
       if (prevState.selectedContacts.includes(contactId)) {
@@ -113,7 +111,6 @@ const ContactView = () => {
     });
   };
 
-  // Handle select all contacts
   const handleSelectAll = () => {
     setState((prevState) => {
       if (prevState.selectedContacts.length === contacts.length) {
@@ -127,12 +124,10 @@ const ContactView = () => {
     });
   };
 
-  // Handle search
   const handleSearch = (term: string) => {
     setState({ ...state, searchTerm: term });
   };
 
-  // Handle filter changes
   const handleFilterChange = (type: "primary" | "owner", value: string) => {
     setState({
       ...state,
@@ -143,12 +138,10 @@ const ContactView = () => {
     });
   };
 
-  // Handle pagination
   const handlePageChange = (page: number) => {
     setState({ ...state, currentPage: page });
   };
 
-  // Handle items per page change
   const handleItemsPerPageChange = (itemsPerPage: number) => {
     setState({ ...state, itemsPerPage: itemsPerPage, currentPage: 1 });
   };
