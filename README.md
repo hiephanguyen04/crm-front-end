@@ -3,6 +3,7 @@
 Based on the context, this appears to be a CRM project built with React, likely using TypeScript, and using SCSS for styling. The project structure looks typical of a modern frontend application.
 
 I should create a README.md that includes:
+
 1. Project overview
 2. Prerequisites
 3. Installation instructions
@@ -17,12 +18,18 @@ A modern CRM application built with React and TypeScript for managing contacts, 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
+
 - [Node.js](https://nodejs.org/) (v14.x or later recommended)
 - [Yarn](https://yarnpkg.com/) package manager
 
 ## Getting Started
 
 Follow these steps to set up and run the project locally:
+
+## account Login
+
+email: "admin@admin.com",
+password: "admin",
 
 ### 1. Clone the repository
 

@@ -82,8 +82,8 @@ export const colorOptions = [
 export const users = [
   {
     id: "1",
-    email: "sebastien@metaforma.com",
-    password: "password123",
+    email: "admin@admin.com",
+    password: "admin",
     fullName: "Sébastien Hanouna",
     role: "admin",
     position: "CEO, Admin",
