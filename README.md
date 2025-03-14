@@ -1,26 +1,3 @@
-<think>The user is asking me to write a README.md file with instructions on how to run or deploy the project in a local environment. The instructions need to be correct and clear, as the user mentions that incorrect instructions will lead to rejection.
-
-Based on the context, this appears to be a CRM project built with React, likely using TypeScript, and using SCSS for styling. The project structure looks typical of a modern frontend application.
-
-I should create a README.md that includes:
-
-1. Project overview
-2. Prerequisites
-3. Installation instructions
-4. Running the project locally
-5. Building for production
-6. Additional information if necessary
-
-I'll need to make assumptions about the build system since I don't see a package.json, but the instructions mention yarn, so I'll assume it's using Yarn as the package manager.</think># CRM Project
-
-A modern CRM application built with React and TypeScript for managing contacts, opportunities, and customer relationships.
-
-## Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- [Node.js](https://nodejs.org/) (v14.x or later recommended)
-- [Yarn](https://yarnpkg.com/) package manager
 
 ## Getting Started
 
@@ -35,7 +12,7 @@ password: "admin",
 
 ```bash
 git clone [repository-url]
-cd crm-project
+cd crm-front-end
 ```
 
 ### 2. Install dependencies
