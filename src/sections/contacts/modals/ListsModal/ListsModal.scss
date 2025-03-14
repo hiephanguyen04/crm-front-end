@@ -1,0 +1,126 @@
+$primary: #ea580c;
+$text-light: #fff;
+$text-red: #ff001f;
+$text-blue: #0038ff;
+$text-dark: #8b8b8b;
+$text-medium: var(--bg-medium);
+$border: #4b5563;
+$bg-light: #1f2937;
+$bg-medium: #111827;
+$hover-bg: rgba(255, 255, 255, 0.1);
+.container-list-model {
+    width: 100%;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        .title {
+            display: flex;
+            flex-direction: column;
+
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .search {
+            width: 156px;
+            background-color: #232b39;
+        }
+    }
+    .wrap-table {
+        padding: 10px 100px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        thead {
+            th {
+                padding: 26px 16px 8px;
+                text-align: left;
+                color: $text-dark;
+                font-size: 14px;
+                font-weight: 400;
+                border-bottom: 2px solid $border;
+            }
+        }
+
+        tbody {
+            tr {
+                border-bottom: 1px solid $border;
+                transition: background 0.2s;
+                text-align: left;
+
+                &:hover {
+                    background-color: $hover-bg;
+                }
+
+                td {
+                    padding: 12px 16px;
+                    color: $text-light;
+                    font-size: 12px;
+                    text-align: left;
+                }
+
+                .name-col {
+                    .contact-name {
+                        font-weight: 500;
+                    }
+
+                    .contact-type {
+                        font-size: 12px;
+                        color: $text-medium;
+                    }
+                }
+
+                .actions-col {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 8px;
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 8px;
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                        transition: background-color 0.2s;
+
+                        svg {
+                            color: $text-light;
+                        }
+                    }
+
+                    .edit-button svg {
+                        color: #facc15; // Màu vàng cho chỉnh sửa
+                    }
+
+                    .delete-button svg {
+                        color: #ef4444; // Màu đỏ cho xóa
+                    }
+                }
+            }
+        }
+    }
+}
+.modal-table-column-name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.tag-color-indicator {
+    display: flex;
+    width: 120px;
+    height: 22px;
+    padding: 0px;
+    margin-right: 8px;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}

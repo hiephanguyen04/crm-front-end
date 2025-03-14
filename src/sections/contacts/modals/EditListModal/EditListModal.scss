@@ -1,0 +1,147 @@
+// src/pages/Contacts/modals/EditListModal.module.scss
+// Variables
+$primary: #ea580c;
+$text-light: #fff;
+$text-medium: #d1d5db;
+$border: #4b5563;
+$bg-light: #1f2937;
+$bg-medium: #111827;
+$hover-bg: rgba(255, 255, 255, 0.1);
+$disabled: rgba(255, 255, 255, 0.3);
+
+.container {
+    background: $bg-medium;
+    padding: 10px 100px;
+    border-radius: 10px;
+    color: $text-light;
+    width: 100%;
+
+    &.sm {
+        width: 320px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        gap: 6px;
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .close {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: $text-light;
+
+            &:hover {
+                color: lighten($text-light, 10%);
+            }
+        }
+    }
+
+    .form {
+        margin-top: 32px;
+        border-bottom: 1px solid $border;
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            background: $bg-light;
+            border: 1px solid $border;
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 12px;
+
+            .form-input {
+                flex: 1;
+                height: 40px;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: $text-light;
+                font-size: 14px;
+                padding: 4px;
+
+                &::placeholder {
+                    color: $text-medium;
+                }
+            }
+
+            .form-input-clear {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                color: $text-medium;
+                transition: all 0.2s;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        height: 60px;
+        font-size: 14px;
+        margin-top: 24px;
+
+        .btn-cancel {
+            background: transparent;
+            border: 1px solid transparent;
+            color: $text-light;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: darken($bg-light, 5%);
+            }
+        }
+
+        .btn-save {
+            background: $primary;
+            border: none;
+            color: $text-light;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: darken($primary, 10%);
+            }
+
+            &:disabled {
+                background: $disabled;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+.color-selector {
+    margin-right: 8px;
+}
+
+.color-button {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,187 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    .modal-container {
+        background: #111827;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        max-width: 90%;
+        color: #fff;
+
+        &.modal-sm {
+            width: 320px;
+        }
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #4b5563;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+        .modal-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .modal-close {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            transition: all 0.2s;
+
+            &:hover {
+                color: lighten(#fff, 10%);
+            }
+        }
+    }
+
+    .modal-form {
+        .form-group {
+            display: flex;
+            align-items: center;
+            background: #1f2937;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 12px;
+
+            .form-input {
+                flex: 1;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #fff;
+                font-size: 14px;
+                padding: 4px;
+
+                &::placeholder {
+                    color: #d1d5db;
+                }
+            }
+
+            .form-input-clear {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                color: #d1d5db;
+                transition: all 0.2s;
+
+                &:hover {
+                    color: #ea580c;
+                }
+            }
+        }
+
+        .color-selector {
+            display: flex;
+            align-items: center;
+            margin-right: 8px;
+
+            .color-button {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                border: 2px solid white;
+                cursor: pointer;
+            }
+        }
+
+        .color-picker {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+
+            .color-option {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: 2px solid transparent;
+
+                &:hover {
+                    border-color: white;
+                }
+            }
+        }
+
+        .add-more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .add-more-button {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 8px 12px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 6px;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                &:hover {
+                    background: lighten(rgba(255, 255, 255, 0.1), 5%);
+                }
+
+                .add-icon svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 12px;
+
+        .btn-cancel {
+            background: transparent;
+            border: 1px solid #4b5563;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: darken(#1f2937, 5%);
+            }
+        }
+
+        .btn-save {
+            background: #ea580c;
+            border: none;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: darken(#ea580c, 10%);
+            }
+
+            &:disabled {
+                background: rgba(255, 255, 255, 0.3);
+                cursor: not-allowed;
+            }
+        }
+    }
+}
